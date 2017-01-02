@@ -505,7 +505,7 @@ console.log(isJump);
           }else{
             movedTop = true;
             if(fire == false){
-              bulletDirection = 'top';
+              //bulletDirection = 'top';
             }
           }
         });
@@ -518,7 +518,7 @@ console.log(isJump);
         $('#gamepad .down').bind('mousedown touchstart', function(){
           movedBottom = true;
           if(fire == false){
-            bulletDirection = 'bottom';
+            //bulletDirection = 'bottom';
           }
         });
 
@@ -565,7 +565,7 @@ console.log(isJump);
           }else{
             movedTop = true;
             if(fire == false){
-              bulletDirection = 'top';
+              //bulletDirection = 'top';
             }
           }
 
@@ -582,7 +582,7 @@ console.log(isJump);
           }else{
             movedTop = true;
             if(fire == false){
-              bulletDirection = 'top';
+              //bulletDirection = 'top';
             }
           }
 
@@ -601,14 +601,14 @@ console.log(isJump);
           }else{
             movedTop = true;
             if(fire == false){
-              bulletDirection = 'top';
+              //bulletDirection = 'top';
             }
           }
 
         }else if(e.which == 83 && jumpable == false){
           movedBottom = true;
           if(fire == false){
-            bulletDirection = 'bottom';
+            //bulletDirection = 'bottom';
           }
 
         }
