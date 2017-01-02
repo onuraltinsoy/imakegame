@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Super Mario</title>
+
+    <!-- js game engine stylesheet -->
+    <link rel="stylesheet" href="css/imakegame.css">
+  </head>
+  <body>
+    <div id="scene" width="800" height="500" automove="false">
+      <div id="bg" src="https://peukalo.files.wordpress.com/2011/04/smw-bg-forest.png"></div>
+      <div id="hero" width="50" height="50" position="290,200" shoot="true" bg="https://media2.giphy.com/media/nOoM9YZ2QuYQE/200_s.gif" bg-move="https://drpaleynoung.files.wordpress.com/2014/09/supermario_hlq6z1q4.gif"></div>
+      <div id="life">Yaşam: <span></span></div>
+      <div id="score">Puan: <span></span></div>
+      <div id="bullet" width="30" height="30" speed="50" bg="https://1.bp.blogspot.com/-JNeCrIBRfL8/V4JG-95Tn6I/AAAAAAAAAsk/27rWdAqA4TQRFSmQkYkB_jnuFqDteHEmQCLcB/s1600/New%2BPiskel%2B%25282%2529.gif"></div>
+      <div class="floor" width="1600" height="50" position="450,0" bg="http://jogosindie.com/wp-content/uploads/2014/05/ground.gif"></div>
+
+      <div class="floor" width="300" height="50" position="400,400" bg="http://jogosindie.com/wp-content/uploads/2014/05/ground.gif"></div>
+
+      <div class="floor" width="400" height="50" position="400,1100" bg="http://jogosindie.com/wp-content/uploads/2014/05/ground.gif"></div>
+      <div class="floor" width="350" height="50" position="350,1150" bg="http://jogosindie.com/wp-content/uploads/2014/05/ground.gif"></div>
+      <div class="floor" width="150" height="50" position="300,1300" bg="http://jogosindie.com/wp-content/uploads/2014/05/ground.gif"></div>
+      <div class="floor" width="850" height="50" position="450,2550" bg="http://jogosindie.com/wp-content/uploads/2014/05/ground.gif"></div>
+
+      <div class="floor" width="30" height="30" position="250,900" bg="http://icons.iconarchive.com/icons/ph03nyx/super-mario/128/Retro-Block-icon.png"></div>
+      <div class="floor" width="30" height="30" position="250,930" bg="http://icons.iconarchive.com/icons/ph03nyx/super-mario/128/Retro-Block-icon.png"></div>
+      <div class="floor" width="30" height="30" position="250,960" bg="http://icons.iconarchive.com/icons/ph03nyx/super-mario/128/Retro-Block-icon.png"></div>
+      <div class="floor" width="30" height="30" position="250,990" bg="http://icons.iconarchive.com/icons/ph03nyx/super-mario/128/Retro-Block-icon.png"></div>
+
+      <div class="bonus" width="25" height="25" position="300,1748" bg="https://superlevel.de/wp-content/uploads/SMB3-Coin1.gif"></div>
+      <div class="bonus" width="25" height="25" position="270,1778" bg="https://superlevel.de/wp-content/uploads/SMB3-Coin1.gif"></div>
+      <div class="bonus" width="25" height="25" position="170,1878" bg="https://superlevel.de/wp-content/uploads/SMB3-Coin1.gif"></div>
+      <div class="bonus" width="25" height="25" position="170,1908" bg="https://superlevel.de/wp-content/uploads/SMB3-Coin1.gif"></div>
+
+      <div class="bonus" width="25" height="25" position="170,1950" bg="https://superlevel.de/wp-content/uploads/SMB3-Coin1.gif"></div>
+      <div class="bonus" width="25" height="25" position="150,1980" bg="https://superlevel.de/wp-content/uploads/SMB3-Coin1.gif"></div>
+      <div class="bonus" width="25" height="25" position="150,2100" bg="https://superlevel.de/wp-content/uploads/SMB3-Coin1.gif"></div>
+      <div class="bonus" width="25" height="25" position="170,2130" bg="https://superlevel.de/wp-content/uploads/SMB3-Coin1.gif"></div>
+      <div class="bonus" width="25" height="25" position="280,2450" bg="https://superlevel.de/wp-content/uploads/SMB3-Coin1.gif"></div>
+      <div class="bonus" width="25" height="25" position="310,2480" bg="https://superlevel.de/wp-content/uploads/SMB3-Coin1.gif"></div>
+      <div class="bonus" width="25" height="25" position="340,2510" bg="https://superlevel.de/wp-content/uploads/SMB3-Coin1.gif"></div>
+      <div class="bonus" width="25" height="25" position="370,2540" bg="https://superlevel.de/wp-content/uploads/SMB3-Coin1.gif"></div>
+
+      <div class="floor" width="30" height="30" position="350,1718" bg="http://icons.iconarchive.com/icons/ph03nyx/super-mario/128/Retro-Block-icon.png"></div>
+      <div class="floor" width="30" height="30" position="290,1820" bg="http://icons.iconarchive.com/icons/ph03nyx/super-mario/128/Retro-Block-icon.png"></div>
+      <div class="floor" width="30" height="30" position="290,1850" bg="http://icons.iconarchive.com/icons/ph03nyx/super-mario/128/Retro-Block-icon.png"></div>
+      <div class="floor" width="30" height="30" position="290,1880" bg="http://icons.iconarchive.com/icons/ph03nyx/super-mario/128/Retro-Block-icon.png"></div>
+      <div class="floor" width="30" height="30" position="290,1910" bg="http://icons.iconarchive.com/icons/ph03nyx/super-mario/128/Retro-Block-icon.png"></div>
+      <div class="floor" width="30" height="30" position="290,2225" bg="http://icons.iconarchive.com/icons/ph03nyx/super-mario/128/Retro-Block-icon.png"></div>
+      <div class="floor" width="30" height="30" position="290,2300" bg="http://icons.iconarchive.com/icons/ph03nyx/super-mario/128/Retro-Block-icon.png"></div>
+      <div class="floor" width="30" height="30" position="290,2330" bg="http://icons.iconarchive.com/icons/ph03nyx/super-mario/128/Retro-Block-icon.png"></div>
+      <div class="floor" width="30" height="30" position="290,2360" bg="http://icons.iconarchive.com/icons/ph03nyx/super-mario/128/Retro-Block-icon.png"></div>
+      <div class="floor" width="30" height="30" position="290,2390" bg="http://icons.iconarchive.com/icons/ph03nyx/super-mario/128/Retro-Block-icon.png"></div>
+
+      <div class="enemy" width="90" height="90" position="300,560" road="400,560" bg="http://rs739.pbsrc.com/albums/xx39/Gokustef/Sprites/Flying-Turtle.gif~c200" bg-kill="http://cliparts.co/cliparts/gie/qBd/gieqBd8id.png"></div>
+      <div class="enemy" width="35" height="35" position="415,400" road="0,450" mortal="true" bg="http://static.giantbomb.com/uploads/original/9/93854/2438851-goomba+smb+sprite+walk+gif.gif" bg-kill="http://cliparts.co/cliparts/gie/qBd/gieqBd8id.png"></div>
+      <div class="enemy" width="35" height="35" position="415,1100" road="400,1100" mortal="true" bg="http://static.giantbomb.com/uploads/original/9/93854/2438851-goomba+smb+sprite+walk+gif.gif" bg-kill="http://cliparts.co/cliparts/gie/qBd/gieqBd8id.png"></div>
+      <div class="enemy" width="35" height="35" position="218,990" road="900,990" speed="5" bg="http://static.giantbomb.com/uploads/original/9/93854/2438851-goomba+smb+sprite+walk+gif.gif" bg-kill="http://cliparts.co/cliparts/gie/qBd/gieqBd8id.png"></div>
+      <div class="enemy" width="90" height="90" position="200,1400" road="1200,1400" bg="http://rs739.pbsrc.com/albums/xx39/Gokustef/Sprites/Flying-Turtle.gif~c200" bg-kill="http://cliparts.co/cliparts/gie/qBd/gieqBd8id.png"></div>
+      <div class="enemy" width="90" height="90" position="260,2180" road="2050,2180" bg="http://rs739.pbsrc.com/albums/xx39/Gokustef/Sprites/Flying-Turtle.gif~c200" bg-kill="http://cliparts.co/cliparts/gie/qBd/gieqBd8id.png"></div>
+      <div class="enemy" width="90" height="90" position="320,2480" road="2400,2480" bg="http://rs739.pbsrc.com/albums/xx39/Gokustef/Sprites/Flying-Turtle.gif~c200" bg-kill="http://cliparts.co/cliparts/gie/qBd/gieqBd8id.png"></div>
+      <div class="enemy" width="90" height="90" position="320,2480" road="2400,2480" bg="http://rs739.pbsrc.com/albums/xx39/Gokustef/Sprites/Flying-Turtle.gif~c200" bg-kill="http://cliparts.co/cliparts/gie/qBd/gieqBd8id.png"></div>
+      <div class="enemy" width="90" height="90" position="300,1300" road="1000,1300" bg="http://rs739.pbsrc.com/albums/xx39/Gokustef/Sprites/Flying-Turtle.gif~c200" bg-kill="http://cliparts.co/cliparts/gie/qBd/gieqBd8id.png"></div>
+      <div class="enemy" width="35" height="35" position="415,2950" road="2750,2950" mortal="true" bg="http://static.giantbomb.com/uploads/original/9/93854/2438851-goomba+smb+sprite+walk+gif.gif" bg-kill="http://cliparts.co/cliparts/gie/qBd/gieqBd8id.png"></div>
+
+      <div class="bonus" width="25" height="25" position="240,450" bg="https://superlevel.de/wp-content/uploads/SMB3-Coin1.gif"></div>
+      <div class="bonus" width="25" height="25" position="240,480" bg="https://superlevel.de/wp-content/uploads/SMB3-Coin1.gif"></div>
+      <div class="bonus" width="25" height="25" position="240,510" bg="https://superlevel.de/wp-content/uploads/SMB3-Coin1.gif"></div>
+      <div class="bonus" width="25" height="25" position="240,540" bg="https://superlevel.de/wp-content/uploads/SMB3-Coin1.gif"></div>
+      <div class="bonus" width="25" height="25" position="240,570" bg="https://superlevel.de/wp-content/uploads/SMB3-Coin1.gif"></div>
+      <div class="bonus" width="25" height="25" position="410,800" bg="https://superlevel.de/wp-content/uploads/SMB3-Coin1.gif"></div>
+      <div class="bonus" width="25" height="25" position="410,830" bg="https://superlevel.de/wp-content/uploads/SMB3-Coin1.gif"></div>
+      <div class="bonus" width="25" height="25" position="410,860" bg="https://superlevel.de/wp-content/uploads/SMB3-Coin1.gif"></div>
+      <div class="bonus" width="25" height="25" position="410,890" bg="https://superlevel.de/wp-content/uploads/SMB3-Coin1.gif"></div>
+      <div class="bonus" width="25" height="25" position="410,920" bg="https://superlevel.de/wp-content/uploads/SMB3-Coin1.gif"></div>
+      <div class="bonus" width="25" height="25" position="410,950" bg="https://superlevel.de/wp-content/uploads/SMB3-Coin1.gif"></div>
+      <div class="bonus" width="25" height="25" position="170,1280" bg="https://superlevel.de/wp-content/uploads/SMB3-Coin1.gif"></div>
+      <div class="bonus" width="25" height="25" position="160,1310" bg="https://superlevel.de/wp-content/uploads/SMB3-Coin1.gif"></div>
+      <div class="bonus" width="25" height="25" position="150,1340" bg="https://superlevel.de/wp-content/uploads/SMB3-Coin1.gif"></div>
+      <div class="bonus" width="25" height="25" position="150,1400" bg="https://superlevel.de/wp-content/uploads/SMB3-Coin1.gif"></div>
+      <div class="bonus" width="25" height="25" position="160,1430" bg="https://superlevel.de/wp-content/uploads/SMB3-Coin1.gif"></div>
+      <div class="bonus" width="25" height="25" position="170,1460" bg="https://superlevel.de/wp-content/uploads/SMB3-Coin1.gif"></div>
+
+      <div class="bonus" width="25" height="25" position="130,920" bg="https://superlevel.de/wp-content/uploads/SMB3-Coin1.gif"></div>
+      <div class="bonus" width="25" height="25" position="130,950" bg="https://superlevel.de/wp-content/uploads/SMB3-Coin1.gif"></div>
+      <div class="bonus" width="25" height="25" position="130,980" bg="https://superlevel.de/wp-content/uploads/SMB3-Coin1.gif"></div>
+
+      <div id="finish" width="90px" height="100px" position="355,3000" bg="http://vignette2.wikia.nocookie.net/mario/images/b/b1/Checkpoint_Flag.png" next-level="game.html"></div>
+
+
+      <div id="end"><span>Oyun Bitti</span></div>
+    </div>
+
+    <audio id="level" autoplay>
+      <source src="sound/01-main-theme-overworld.mp3" type="audio/mp3">
+    </audio>
+
+    <audio id="jump">
+      <source src="sound/smb3_jump.wav" type="audio/wav">
+    </audio>
+
+    <audio id="hero-died">
+      <source src="sound/smb3_player_down.wav" type="audio/wav">
+    </audio>
+
+    <audio id="enemy-died">
+      <source src="sound/smb3_kick.wav" type="audio/wav">
+    </audio>
+
+    <audio id="get-bonus">
+      <source src="sound/smb3_coin.wav" type="audio/wav">
+    </audio>
+
+    <audio id="shoot">
+      <source src="sound/smb3_fireball.wav" type="audio/wav">
+    </audio>
+
+    <audio id="level-clear">
+      <source src="sound/smb3_level_clear.wav" type="audio/wav">
+    </audio>
+
+
+
+    <!-- js game engine library -->
+    <script src="https://code.jquery.com/jquery-3.1.1.min.js" integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8=" crossorigin="anonymous"></script>
+    <script type="text/javascript" src="js/imakegame.min.js"></script>
+  </body>
+</html>
