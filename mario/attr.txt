@@ -17,6 +17,7 @@ hero attributes
   speed (default is 7)
   life (default is 3)
   shoot (true or false, default is true)
+  multi jump (true or false, default is false)
 
 floor attributes
   width
